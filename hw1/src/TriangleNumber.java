@@ -1,6 +1,6 @@
 
 class TriangleNumber{
-    static boolean check_triangle(int triangle, int num){
+    static boolean checkTriangle(int triangle, int num){
         int number_of_devidors = 1; //triangle делится сам на себя
 
         
@@ -17,7 +17,7 @@ class TriangleNumber{
 
         //triangle == curr*(curr+1)/2, так как это сумма последовательных целых чисел
         
-        while( !check_triangle(curr*(curr+1)/2, curr)){
+        while( !checkTriangle(curr*(curr+1)/2, curr)){
             curr +=1;
         }
         System.out.println(curr*(curr+1)/2);
