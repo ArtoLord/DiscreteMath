@@ -1,7 +1,8 @@
+package main;
 
 public class DoubleFloat {
 
-    static float doubleFloat(float number){
+    public static float doubleFloat(float number){
         
         int bin = Float.floatToIntBits(number);
         int e = (bin & ((1 << 31) - 1)) >> 23;
