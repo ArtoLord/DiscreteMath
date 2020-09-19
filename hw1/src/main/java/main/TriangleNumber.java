@@ -7,7 +7,7 @@ class TriangleNumber{
      * @param triangle триугольное число, которое нужно проверить
      * @param num номер триугольного числа
      */
-    static boolean checkTriangle(final int triangle, final int num, final boolean print) {
+    static boolean checkTriangle(final int triangle, final int num) {
         int number_of_devidors = 0; 
 
         for (int i = 1; i <= num + 1; i++) {
