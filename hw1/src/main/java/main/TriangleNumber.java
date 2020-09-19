@@ -1,6 +1,12 @@
 package main;
 
 class TriangleNumber{
+
+    /**
+     * Проверка, имеент ли триугольное число не меньше 500 делителей
+     * @param triangle триугольное число, которое нужно проверить
+     * @param num номер триугольного числа
+     */
     static boolean checkTriangle(final int triangle, final int num) {
         int number_of_devidors = 1; // triangle делится сам на себя
 
