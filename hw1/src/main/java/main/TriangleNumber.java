@@ -7,14 +7,18 @@ class TriangleNumber{
      * @param triangle триугольное число, которое нужно проверить
      * @param num номер триугольного числа
      */
-    static boolean checkTriangle(final int triangle, final int num) {
-        int number_of_devidors = 1; // triangle делится сам на себя
+    static boolean checkTriangle(final int triangle, final int num, final boolean print) {
+        int number_of_devidors = 0; 
 
         for (int i = 1; i <= num + 1; i++) {
             if (triangle % i == 0) {
-                number_of_devidors += 1;
+                number_of_devidors ++;
+                if (triangle / i > num + 1){
+                    number_of_devidors ++;
+                }
             }
         }
+
         return number_of_devidors >= 500;
     }
 
@@ -23,9 +27,10 @@ class TriangleNumber{
 
         //triangle == curr*(curr+1)/2, так как это сумма последовательных целых чисел
         
-        while( !checkTriangle(curr*(curr+1)/2, curr)){
+        while( !checkTriangle(curr*(curr+1)/2, curr, false)){
             curr +=1;
         }
         System.out.println(curr*(curr+1)/2);
+
     }
 }
