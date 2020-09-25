@@ -27,7 +27,7 @@ class TriangleNumber{
 
         //triangle == curr*(curr+1)/2, так как это сумма последовательных целых чисел
         
-        while( !checkTriangle(curr*(curr+1)/2, curr, false)){
+        while( !checkTriangle(curr*(curr+1)/2, curr)){
             curr +=1;
         }
         System.out.println(curr*(curr+1)/2);
