@@ -26,13 +26,15 @@ public class Task2 {
 
     public static void main(String[] args){
         ArrayList<Integer> paskal = paskalTriangle(20);
-        int m = 0;
+        int m = 0, max_i = -1;
         for (int i = 0; i < paskal.size(); i++) { // Рассматриваем все числа и ищем максимум
             if ((1 << i) * paskal.get(i) > m){
                 m = (1 << i) * paskal.get(i);
+                max_i = i;
             }
         }
         System.out.println(m);
+        System.out.println(max_i);
     }
     
 }
